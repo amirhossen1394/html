@@ -4,6 +4,20 @@
 <head>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Vazir&display=swap');
+        @keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.animated-header {
+    animation: slideDown 1.5s ease-in-out;
+}
 
 body {
     font-family: "Vazir", Arial, sans-serif;
@@ -151,7 +165,7 @@ button:hover {
             <ul>
                 <li><a href="#home">خانه</a></li>
                 <li><a href="#about">درباره ما</a></li>
-                <li><a href="https://amirhossen1394.github.io/html/index3">پیام با گیت هاب</a></li>
+                <li><a href="https://amirhossen1394.github.io/html/">پیام با گیت هاب</a></li>
             </ul>
         </nav>
     </header>
