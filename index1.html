@@ -2,118 +2,284 @@
 <html lang="fa">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>سایت اینده</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>سایت آینده | مدرن و حرفه‌ای</title>
+
+    <!-- فونت وزیر از CDN -->
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css" rel="stylesheet" />
+
+    <!-- FontAwesome برای آیکون‌ها -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
     <style>
-        audio {
-            width: 100px;
-            height: 100px;
-            max-width: 100px;
-        }
-
-        @font-face {
-            font-family: 'CustomFont';
-            src: url('A-Iranian-Sans/Iranian-Sans.woff') format('woff'),
-                url('A-Iranian-Sans/Iranian-Sans.woff2') format('woff2');
-        }
-
+        /* فونت و بدنه */
         body {
-            font-family: 'CustomFont', sans-serif;
+            font-family: 'Vazir', sans-serif;
             margin: 0;
-            padding: 0;
-            text-align: center;
-            background-color: #f5f5f5;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: #333;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            transition: background 0.5s ease;
         }
 
-        header {
-            background-color: #004466;
-            color: white;
-            padding: 20px;
-            font-size: 24px;
-        }
-
-        main {
-            padding: 20px;
-        }
-
-        .content {
-            max-width: 800px;
-            margin: auto;
-            background-color: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        button {
-            background-color: #008CBA;
-            color: white;
+        /* منوی ناوبری */
+        nav {
+            background-color: rgba(0, 68, 102, 0.9);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             padding: 10px 20px;
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav .logo {
+            font-size: 24px;
+            font-weight: bold;
+            cursor: default;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #ffdd57;
+        }
+
+        /* اصلی */
+        main {
+            flex: 1;
+            padding: 20px;
+            max-width: 900px;
+            margin: auto;
+            background: rgba(255 255 255 / 0.95);
+            border-radius: 12px;
+            box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
+        }
+
+        /* عنوان‌ها */
+        h1,
+        h2,
+        h3 {
+            font-weight: 700;
+            color: #333;
+        }
+
+        /* دکمه‌ها */
+        button {
+            background: linear-gradient(45deg, #667eea, #764ba2);
             border: none;
+            color: white;
+            padding: 12px 25px;
+            font-size: 16px;
+            border-radius: 8px;
             cursor: pointer;
-            border-radius: 5px;
-            margin-top: 10px;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+            margin: 10px 5px 0 0;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.5);
         }
 
         button:hover {
-            background-color: #005f75;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(118, 75, 162, 0.7);
+            background: linear-gradient(45deg, #764ba2, #667eea);
         }
 
+        /* محتوا */
+        .content p {
+            line-height: 1.7;
+            font-size: 18px;
+        }
+
+        /* ویدیو */
+        video {
+            max-width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(102, 126, 234, 0.4);
+            margin: 20px 0;
+        }
+
+        /* عکس */
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
+        }
+
+        /* iframe */
+        iframe {
+            width: 100%;
+            height: 400px;
+            border: none;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(102, 126, 234, 0.3);
+            margin: 20px 0;
+        }
+
+        /* صدا */
+        audio {
+            width: 100%;
+            max-width: 400px;
+            margin: 20px 0;
+            outline: none;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(102, 126, 234, 0.4);
+        }
+
+        /* بخش درباره ما و تماس */
+        section {
+            margin-top: 40px;
+            padding: 20px;
+            background: #f0f4ff;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(102, 126, 234, 0.2);
+        }
+
+        section h2 {
+            margin-bottom: 15px;
+            color: #445577;
+        }
+
+        /* فوتر */
         footer {
             background-color: #004466;
             color: white;
-            padding: 10px;
-            position: fixed;
-            width: 100%;
+            text-align: center;
+            padding: 15px;
+            font-size: 14px;
+            position: sticky;
             bottom: 0;
+            width: 100%;
         }
 
-        img {
-            width: 300px;
-            height: auto;
+        /* ریسپانسیو */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                background-color: rgba(0, 68, 102, 0.95);
+                position: absolute;
+                top: 60px;
+                right: 0;
+                width: 200px;
+                display: none;
+            }
+
+            nav ul.active {
+                display: flex;
+            }
+
+            nav ul li {
+                margin: 15px 0;
+            }
+
+            nav .menu-toggle {
+                display: block;
+                cursor: pointer;
+                font-size: 24px;
+                color: white;
+            }
+
+            nav .logo {
+                cursor: pointer;
+            }
+        }
+
+        @media (min-width: 769px) {
+            nav .menu-toggle {
+                display: none;
+            }
         }
     </style>
 </head>
 
 <body>
-    <header>به سایت ما خوش آمدید</header>
+    <nav>
+        <div class="logo">سایت آینده</div>
+        <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+        <ul>
+            <li><a href="#about">درباره ما</a></li>
+            <li><a href="#contact">تماس با ما</a></li>
+            <li><a href="https://sabzlearn.ir/" target="_blank" rel="noopener noreferrer">سبزلرن</a></li>
+            <li><a href="https://webzi.ir/" target="_blank" rel="noopener noreferrer">وبزی</a></li>
+        </ul>
+    </nav>
 
     <main>
         <div class="content">
-            <h2>معرفی سایت</h2>
+            <h1>به سایت ما خوش آمدید</h1>
             <p>در اینجا می‌توانید بهترین محتوا و منابع را پیدا کنید.</p>
-            <video controls autoplay width="600" height="400">
-                <source src="____.mp4" type="video/mp4">
+<p>سایت سبزلرن وبیزی هم تبلیغ است  و هم پیشنهاد برای ساخت سایت</p>
+            <video controls autoplay muted loop>
+                <source src="____.mp4" type="video/mp4" />
                 مرورگر شما از ویدیو پشتیبانی نمی‌کند.
             </video>
-            <br>
 
             <img src="https://wallpapers.com/images/high/black-ops-3-1920-x-1080-wallpaper-qwjpzxa7bqwnac1o.webp"
-                alt="تصویر نمونه" width="100">
+                alt="تصویر نمونه" />
 
-            <br>
-            <iframe src="https://sabzlearn.ir/" frameborder="0" width="600" height="400"></iframe>
-            <br>
+            <iframe src="https://sabzlearn.ir/" title="سبزلرن"></iframe>
+
             <iframe
                 src="https://webzi.ir/?utm_source=aparat&utm_medium=video&utm_campaign=introduce&utm_term=%D8%A8%D8%A7%D8%B2%D8%A7%D8%B1%DB%8C%D8%A7%D8%A8%DB%8C"
-                frameborder="0" width="600" height="400"></iframe>
-            <br>
+                title="وبزی"></iframe>
+
             <audio controls>
-                <source src="Erfan Tahmasbi - Delgir (320).mp3" type="audio/mp3">
+                <source src="Erfan Tahmasbi - Delgir (320).mp3" type="audio/mp3" />
                 مرورگر شما از فایل صوتی پشتیبانی نمی‌کند.
             </audio>
 
-            <br>
-            <button onclick="window.open('https://sabzlearn.ir/', '_blank')">بازدید از سایت</button>
+            <button onclick="window.open('https://sabzlearn.ir/', '_blank')">بازدید از سایت سبزلرن</button>
             <button
-                onclick="window.open('https://webzi.ir/?utm_source=aparat&utm_medium=video&utm_campaign=introduce&utm_term=%D8%A8%D8%A7%D8%B2%D8%A7%D8%B1%DB%8C%D8%A7%D8%A8%DB%8C')">بازدید
-                از سایت</button>
+                onclick="window.open('https://webzi.ir/?utm_source=aparat&utm_medium=video&utm_campaign=introduce&utm_term=%D8%A8%D8%A7%D8%B2%D8%A7%D8%B1%DB%8C%D8%A7%D8%A8%DB%8C', '_blank')">بازدید
+                از سایت وبزی</button>
+
+            <section id="about">
+                <h2>درباره ما</h2>
+                <p>ما یک تیم متعهد به ارائه بهترین خدمات و محتواهای آموزشی هستیم که به شما کمک می‌کند به اهداف خود
+                    برسید. هدف ما خلق تجربه‌ای بی‌نظیر و کاربرپسند است.</p>
+            </section>
+
+            <section id="contact">
+                <h2>تماس با ما</h2>
+                <p>ایمیل: <a href="mailto:amirhoh.1394@gmail.com">amirhoh.1394@gmail.com</a></p>
+
+
+            </section>
         </div>
     </main>
 
-    <footer>gmailپیام با: amirhoh.1394@gmail.com</footer>
+    <footer>پیام با: <a href="mailto:amirhoh.1394@gmail.com" style="color:#ffdd57;">amirhoh.1394@gmail.com</a></footer>
 
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navUl = document.querySelector('nav ul');
+
+        menuToggle.addEventListener('click', () => {
+            navUl.classList.toggle('active');
+        });
+    </script>
 </body>
 
 </html>
