@@ -1,81 +1,105 @@
-<html lang="en">
+<!DOCTYPE html>
+<html lang="fa">
 
 <head>
-    <link rel="stylesheet" href="styl.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>سایت آینده</title>
+
     <style>
+        @font-face {
+            font-family: 'CustomFont';
+            src: url('A-Iranian-Sans/Iranian-Sans.woff') format('woff'),
+                url('A-Iranian-Sans/Iranian-Sans.woff2') format('woff2');
+        }
+
+        body {
+            font-family: 'CustomFont', sans-serif;
+            background-color: navy;
+            margin: 0;
+            padding: 0;
+            color: black;
+            direction: rtl;
+            text-align: center;
+        }
+
         header {
-    background-color: rgb(255, 217, 1);
-    padding: 20px;
-    font-size: 24px;
+            background-color: rgb(255, 217, 1);
+            padding: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
 
-    text-align: center;
+        p {
+            color: brown;
+            background-color: wheat;
+            padding: 10px;
+            margin: 10px auto;
+            max-width: 600px;
+            font-size: 22px;
+            line-height: 1.4;
+            border-radius: 8px;
+        }
 
-}
+        img {
+            width: 250px;
+            height: 150px;
+            margin: 10px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px #00000088;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
 
-p {
-    color: brown;
-    text-align: center;
-    background-color: wheat;
-    padding: 2px;
-    width: auto;
-    height: 50px;
-    font-size: 24px;
-}
+        img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px #ffdd57;
+        }
 
-img {
-    width: 250px;
-    height: 150px;
+        a {
+            display: inline-block;
+            background-color: white;
+            color: black;
+            padding: 12px 25px;
+            margin: 20px 0;
+            font-weight: bold;
+            font-size: 20px;
+            text-decoration: none;
+            border-radius: 10px;
+            box-shadow: 0 0 15px #fff;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            cursor: not-allowed;
+        }
 
-}
-
-body {
-    background-color: navy;
-}
-
-a {
-    color: black;
-    background-color: white;
-    width: 50px;
-    height: 50px;
-    text-align: center;
-    padding: 2px;
-}
-
-@font-face {
-    font-family: 'CustomFont';
-    src: url('A-Iranian-Sans/Iranian-Sans.woff') format('woff'),
-        url('A-Iranian-Sans/Iranian-Sans.woff2') format('woff2');
-}
-
-body {
-    font-family: 'CustomFont', sans-serif;
-}
+        a:hover {
+            background-color: #ffdd57;
+            color: navy;
+        }
     </style>
 </head>
 
 <body>
     <header>
-        سایت اینده همچنان در حال ساخت است
+        سایت آینده همچنان در حال ساخت است
     </header>
-    <div>
-        <p>
-            فارسی دانلود بازی gta sanders
-        </p>
-    </div>
-    <div>
 
-        <img src="https://wallpapers.com/images/high/gta-sa-4k-street-gang-hu0kfxk3si7ou7mz.webp" alt="">
-        <img src="https://wallpapers.com/images/high/gta-san-andreas-three-men-dozkch1o2pukgny6.webp" alt="">
-        <img src="https://wallpapers.com/images/high/gta-sa-4k-street-gang-niocr6jfchb0b8b3.webp" alt="">
-        <img src="https://wallpapers.com/images/high/gta-san-andreas-cool-man-5fp18f4aaqq7tu67.webp" alt="">
-        <img src="https://wallpapers.com/images/high/gta-san-andreas-man-wearing-glasses-2xc4a8mu3qheqpx2.webp" alt="">
+    <p>فارسی دانلود بازی GTA San Andreas</p>
+
+    <div>
+        <img src="https://wallpapers.com/images/high/gta-sa-4k-street-gang-hu0kfxk3si7ou7mz.webp" alt="GTA Image 1" />
+        <img src="https://wallpapers.com/images/high/gta-san-andreas-three-men-dozkch1o2pukgny6.webp" alt="GTA Image 2" />
+        <img src="https://wallpapers.com/images/high/gta-sa-4k-street-gang-niocr6jfchb0b8b3.webp" alt="GTA Image 3" />
+        <img src="https://wallpapers.com/images/high/gta-san-andreas-cool-man-5fp18f4aaqq7tu67.webp" alt="GTA Image 4" />
+        <img src="https://wallpapers.com/images/high/gta-san-andreas-man-wearing-glasses-2xc4a8mu3qheqpx2.webp" alt="GTA Image 5" />
     </div>
-    <a href="">download gta</a>
-    <p>به دستور سازنده سایت این لینک برداشته شده است</p>
-    <header>امیدواریم از سایت اینده راضی باشید</header>
+
+    <a href="#" title="لینک دانلود حذف شده است">Download GTA</a>
+
+    <p>به دستور سازنده سایت این لینک برداشته شده است.</p>
+
+    <header>
+        امیدواریم از سایت آینده راضی باشید
+    </header>
 </body>
 
 </html>
